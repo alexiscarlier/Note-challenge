@@ -8,11 +8,17 @@ View.prototype.noteList = function() {
   return this._noteList;
 };
 
-View.prototype.display = function() {
-  return ("<ul><li><div><%= noteList.notes%></div></li></ul>");
+View.prototype.display = function(noteList) {
+  // .forEach(function(element) {
+  //   return element;
+  // });
+  htmlString = "<ul>";
+  noteList.notes().forEach(function(element) {
+    htmlString += "<li><div>" + element + "</div></li>";
+  });
+  htmlString += "</ul>";
+  return htmlString;
 };
 
-// this method might not work exactly how I want, but it should become clearer
-// how to fix this later on
   exports.View = View;
 })(this);

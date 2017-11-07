@@ -10,7 +10,10 @@ var assert = {
 
 function ViewNoteList() {
   view = new View();
-  assert.isTrue(view.display() === "<ul><li><div><%= noteList.notes%></div></li></ul>");
+  noteList = new NoteList();
+  noteList.addNote("hi");
+  noteList.addNote("bye");
+  assert.isTrue(view.display(noteList) === "<ul><li><div>hi</div></li><li><div>bye</div></li></ul>");
 }
 
 ViewNoteList();
