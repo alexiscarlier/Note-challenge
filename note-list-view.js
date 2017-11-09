@@ -10,8 +10,9 @@ View.prototype.noteList = function() {
 
 View.prototype.display = function() {
   htmlString = "<ul>";
-  noteList.notes().forEach(function(element) {
-    htmlString += "<li><div>" + element + "</div></li>";
+  noteList.notes().forEach(function(note) {
+    shortenedNote = note.substring(0,20);
+    htmlString += "<li><div>" + shortenedNote + "</div></li>";
   });
   htmlString += "</ul>";
   return htmlString;

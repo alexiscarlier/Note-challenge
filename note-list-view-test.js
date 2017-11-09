@@ -11,9 +11,9 @@ var assert = {
 function ViewNoteList() {
   view = new View();
   noteList = new NoteList();
-  noteList.addNote("hi");
-  noteList.addNote("bye");
-  assert.isTrue(view.display(noteList) === "<ul><li><div>hi</div></li><li><div>bye</div></li></ul>");
+  noteList.addNote("Hello, this is a string over 20 characters long");
+  noteList.addNote("Bye, this is also a string over 20 characters long");
+  assert.isTrue(view.display(noteList) === "<ul><li><div>Hello, this is a str</div></li><li><div>Bye, this is also a </div></li></ul>");
 }
 
 ViewNoteList();
