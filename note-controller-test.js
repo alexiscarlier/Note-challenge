@@ -10,8 +10,6 @@ var assert = {
 
 noteList = new NoteList();
 noteController = new NoteController(noteList);
-console.log("ji");
-console.log(noteController.getView().display());
 noteController.getAndUseHTML();
 
 function correctInnerHTML() {
