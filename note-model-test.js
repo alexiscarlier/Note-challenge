@@ -8,6 +8,14 @@ var assert = {
   }
 };
 
+function assignsID() {
+  var note1 = new Note("This note ID should be 0");
+  var note2 = new Note("This note ID should be 1");
+  assert.isTrue(note1.ID() === 0);
+  assert.isTrue(note2.ID() === 1);
+}
+
+assignsID();
 
 function saveNote() {
   var note = new Note("My favourite language is Javascript.");

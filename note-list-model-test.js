@@ -12,8 +12,8 @@ function listNote() {
   var note = new Note("Random words and stuff!!");
   var list = new NoteList();
   list.addNote(note);
-  assert.isTrue(list.notes()[list.notes().length - 1].showContents() === "Random words and stuff!!");
-  assert.isTrue(list.notes().pop() === note);
+  assert.isTrue(list.getNotes()[list.getNotes().length - 1].showContents() === "Random words and stuff!!");
+  assert.isTrue(list.getNotes().pop() === note);
 }
 
 listNote();
@@ -22,8 +22,8 @@ function createAndstoreNote() {
   var noteContents = "RORY";
   var list = new NoteList();
   list.createNote(noteContents);
-  assert.isTrue(list.notes()[list.notes().length - 1].showContents() === 'RORY');
-  assert.isTrue(list.notes().pop() === note);
+  assert.isTrue(list.getNotes()[list.getNotes().length - 1].showContents() === 'RORY');
+  assert.isTrue(list.getNotes().pop() === note);
 }
 
 createAndstoreNote();

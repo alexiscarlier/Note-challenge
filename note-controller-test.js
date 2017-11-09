@@ -16,7 +16,9 @@ function correctInnerHTML() {
   noteList = new NoteList();
   noteController = new NoteController(noteList);
   noteController.getAndUseHTML();
-  assert.isTrue(document.getElementById("app").innerHTML === "<ul><li><div>Favourite drink: sel</div></li></ul>");
+  console.log("BELOW IS CONTROLLER PAGE");
+  console.log(document.getElementById("app").innerHTML);
+  assert.isTrue(document.getElementById("app").innerHTML === '<ul><li><div><a href="#notes/1">Favourite drink: sel</a></div></li></ul>');
 }
 
 correctInnerHTML();

@@ -13,7 +13,9 @@ function ViewNoteList() {
   noteList = new NoteList();
   noteList.addNote("Hello, this is a string over 20 characters long");
   noteList.addNote("Bye, this is also a string over 20 characters long");
-  assert.isTrue(view.display(noteList) === "<ul><li><div>Hello, this is a str</div></li><li><div>Bye, this is also a </div></li></ul>");
+  console.log("BELOW IS LIST VIEW PAGE");
+  console.log(view.display(noteList));
+  assert.isTrue(view.display(noteList) === '<ul><li><div><a href="#notes/1">Hello, this is a str</a></div></li><li><div><a href="#notes/1">Bye, this is also a </a></div></li></ul>');
 }
 
 ViewNoteList();
