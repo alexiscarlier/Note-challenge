@@ -8,10 +8,7 @@ View.prototype.noteList = function() {
   return this._noteList;
 };
 
-View.prototype.display = function(noteList) {
-  // .forEach(function(element) {
-  //   return element;
-  // });
+View.prototype.display = function() {
   htmlString = "<ul>";
   noteList.notes().forEach(function(element) {
     htmlString += "<li><div>" + element + "</div></li>";
