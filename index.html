@@ -2,16 +2,17 @@
 
 <html>
   <div id="app">hello</div>
+  <div id="full-note"></div>
+
+  <form method="POST" action="/notes/new">
+    <input id="text" type=submit>
+    <textarea id="note-text" rows="4" cols="50">
+    </textarea>
+  </form>
 
     <script src="note-model.js"></script>
-    <script src="note-model-test.js"></script>
     <script src="note-list-model.js"></script>
-    <script src="note-list-model-test.js"></script>
     <script src="note-list-view.js"></script>
-    <script src="note-list-view-test.js"></script>
-    <script src="note-controller.js"></script>
-    <script src="note-controller-test.js"></script>
-    <script src="note-controller.js"></script>
     <script src="single-note-view.js"></script>
-    <script src="single-note-view-test.js"></script>
+    <script src="note-controller.js"></script>
 </html>
