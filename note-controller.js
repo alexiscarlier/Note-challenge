@@ -12,7 +12,7 @@
 (function(exports) {
 
   function NoteController(noteList) {
-    noteList.addNote("Favourite drink: seltzer");
+    noteList.createNote("Favourite drink: seltzer");
     this._view = new View(noteList);
   }
 

@@ -10,12 +10,12 @@ View.prototype.noteList = function() {
 
 View.prototype.display = function() {
   htmlString = "<ul>";
-  noteList.getNotes().forEach(function(note) {
-    shortenedNote = note.substring(0,20);
-    noteID = 1;
-    htmlString += '<li><div><a href="#notes/' + noteID.toString() + '"' +">" + shortenedNote + "</a></div></li>";
+  var noteArray = this.noteList().getNotes().map(function(note, index) {
+    noteContents = note.showContents();
+    shortenedNote = noteContents.substring(0,20);
+    return '<li><div><a href="#notes/' + index + '">' + shortenedNote + "</a></div></li>";
   });
-  htmlString += "</ul>";
+  htmlString += noteArray.join("") + "</ul>";
   return htmlString;
 };
 

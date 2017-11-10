@@ -8,17 +8,12 @@ var assert = {
   }
 };
 
-noteList = new NoteList();
-noteController = new NoteController(noteList);
-noteController.getAndUseHTML();
 
 function correctInnerHTML() {
   noteList = new NoteList();
   noteController = new NoteController(noteList);
   noteController.getAndUseHTML();
-  console.log("BELOW IS CONTROLLER PAGE");
-  console.log(document.getElementById("app").innerHTML);
-  assert.isTrue(document.getElementById("app").innerHTML === '<ul><li><div><a href="#notes/1">Favourite drink: sel</a></div></li></ul>');
+  assert.isTrue(document.getElementById("app").innerHTML === '<ul><li><div><a href="#notes/0">Favourite drink: sel</a></div></li></ul>');
 }
 
 correctInnerHTML();
