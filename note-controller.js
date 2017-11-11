@@ -7,6 +7,7 @@
 // }
 //
 // helloToHowdy();
+
 (function(exports) {
 
   function NoteController() {
